@@ -4,7 +4,7 @@ metadata:
   name: apache             # Child app name
   namespace: argocd
 spec:
-  project: nginx-project
+  project: default
   source:
     repoURL: https://github.com/hetgajera01/argocd.git # Repo containing child apps(that you have forked and cloned earlier)
     targetRevision: main
