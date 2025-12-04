@@ -1,8 +1,6 @@
 apiVersion: argoproj.io/v1alpha1 # API version for ArgoCD Projects
 kind: AppProject               # Kind is always AppProject for Projects
 metadata:
-  annotations:
-    argocd.argoproj.io/tracking-id: nginx-app:argoproj.io/AppProject:argocd/nginx-project
   name: nginx-project
   namespace: argocd            # Must always be created in ArgoCD's namespace
 spec:
