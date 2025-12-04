@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: apache             # Child app name
+  namespace: argocd
+spec:
+  project: nginx-project
+  source:
+    repoURL: https://github.com/hetgajera01/argocd.git # Repo containing child apps(that you have forked and cloned earlier)
+    targetRevision: main
+    path: apache/    # path of Apache app in `argocd-demos` repo
+  destination:
+    server: https://172.31.6.84:33893 # Replace with your Cluster Url, To get run: `argocd cluster list`
+    namespace: apache
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
