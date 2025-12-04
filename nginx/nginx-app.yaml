@@ -4,7 +4,7 @@ metadata:
   name: nginx-app
   namespace: argocd
 spec:
-  project: default
+  project: nginx-project
   source:
     repoURL: https://github.com/hetgajera01/argocd.git    # Replace it with your forked repo
     targetRevision: main
@@ -16,4 +16,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
-    
+    syncOptions:                 # Additional sync options
+      - CreateNamespace=true      # Auto-create namespace if it doesn't exist
