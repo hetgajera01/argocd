@@ -4,7 +4,7 @@ metadata:
   name: nginx-project          # Name of the Project (unique within ArgoCD)
   namespace: argocd            # Must always be created in ArgoCD's namespace
 spec:
-  description: Project for frontend team apps   # Optional description
+  description: Project for nginx apps   # Optional description
   sourceRepos:                 # Which Git repos are allowed for this Project
     - https://github.com/hetgajera01/argocd.git
   destinations:                # Which clusters/namespaces apps in this Project can target
