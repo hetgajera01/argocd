@@ -8,7 +8,7 @@ spec:
   sourceRepos:                 # Which Git repos are allowed for this Project
     - https://github.com/hetgajera01/argocd.git
   destinations:                # Which clusters/namespaces apps in this Project can target
-    - namespace: argocd
+    - namespace: '*'
       server: https://172.31.31.75:33893    # Target cluster server url
   clusterResourceWhitelist:    # Which cluster-wide resources are allowed (e.g., CRDs)
     - group: "*"               # '*' means allow all groups
